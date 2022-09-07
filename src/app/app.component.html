@@ -1,0 +1,28 @@
+<div class="bg-dark">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="#">Blog Page</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-item nav-link " routerLinkActive="active" routerLink="/home">Home </a>
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/AddBlog">Add Blog</a>
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/about">My Blogs</a>
+          <ng-container *ngIf="!loggedIn">
+            <a class="nav-item nav-link" routerLink="/register">Register</a>
+            <a class="nav-item nav-link" routerLink="/login">Login</a>
+          </ng-container>
+          <ng-container *ngIf="loggedIn">
+            <a class="nav-item nav-link" routerLink="/" (click)="logout()">logout</a>
+          </ng-container>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<main class="container mt-3">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row g-4 mt-2">
+    <div class="col-md-6 col-lg-4 col-sm-12" *ngFor="let blog of blogs">
+
+      <div class="card  p-3 rounded">
+        <p id="content" [innerHTML]="blog.content"></p>
+        <div class="card-body p-0">
+          <h5 class="card-title">{{blog.title}}</h5>
+          <div class="d-flex flex-wrap mb-3 mt-3 " style="line-height:2.7rem ;" *ngIf="blog?.tags?.length">
+            <span>Tags:</span>
+            <div class="me-2" *ngFor="let tag of blog.tags">
+              <small class="rounded-pill  px-2 py-2 ms-2">{{tag}}</small>
+            </div>
+          </div>
+          <div class="content d-flex justify-content-between mb-2 mt-3">
+
+            <div class="user">{{blog.authorDetail.name}}</div>
+            <div class="date">{{blog.postedAt|date:'short'}}</div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <a (click)="view(blog._id)" style="color: blue; text-decoration: underline;">Read More</a>
+            <span class="comment">comments: {{blog.comments.length}}</span>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

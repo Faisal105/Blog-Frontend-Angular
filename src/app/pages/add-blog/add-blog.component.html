@@ -1,0 +1,44 @@
+ <div class="container">
+
+   <div class="row justify-content-center">
+     <div class="col-md-8">
+       <div class="card shadow-19 mt-5 p-3">
+         <h3>Create Blog</h3>
+
+         <main>
+           <div class=" d-flex flex-column gap-3">
+             <label for="title " style="font-weight: bold">Blog Title</label>
+
+             <input placeholder="Enter text here" style="border-radius: 30px ;height: 40px;" [(ngModel)]="blogTitle">
+           </div>
+           <tag-input [ngModel]="userTags" secondaryPlaceholder="Enter Tags" placeholder="Add New"
+             [modelAsStrings]="true" (onAdd)="onTagAdd($event)" (onRemove)="onTagRemove($event)">
+
+             <tag-input-dropdown [autocompleteItems]="suggestedTags" [showDropdownIfEmpty]="true"
+               [dynamicUpdate]="false">
+
+             </tag-input-dropdown>
+
+           </tag-input>
+           <div class=" mt-3">
+             <label for="content">Blog Content</label>
+             <angular-editor [placeholder]="'Enter text here...'" id="content" [(ngModel)]="blogContent"
+               [config]="myConfig">
+             </angular-editor>
+
+           </div>
+
+           <div>
+             <div class="d-flex mt-3 mx-2">
+               <button class="btn btn-success btn-block w-100 mx-2" (click)="onSubmit()">
+                 Save Blog
+               </button><button class="btn btn-danger btn-block w-100" (click)="GoBack()">
+                 Cancel
+               </button>
+             </div>
+           </div>
+         </main>
+       </div>
+     </div>
+   </div>
+ </div>

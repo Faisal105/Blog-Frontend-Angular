@@ -1,0 +1,40 @@
+.card-title {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #000000;
+  color: #3a3a3a;
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.comments {
+  margin-top: 2rem;
+  border-top: 2px solid rgb(195, 195, 195);
+}
+
+input {
+  border-radius: 20px;
+  height: 30%;
+}
+
+.add-comment {
+  background-color: rgb(120, 125, 155);
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  font-size: 10px;
+  border-radius: 20px;
+}
+.comment-content {
+  margin: 0.25rem 0rem;
+}
+.comment-secton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

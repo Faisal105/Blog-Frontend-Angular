@@ -1,0 +1,25 @@
+p {
+  height: 9rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+.user,
+.date {
+  color: rgb(161, 161, 161);
+  font-weight: bold;
+}
+
+.date {
+  color: rgb(161, 161, 161);
+  font-weight: bold;
+}
+.comment {
+  color: rgb(161, 161, 161);
+}
+.rounded-pill {
+  background-color: rgb(161, 161, 161);
+  height: 10px;
+  color: white;
+}
